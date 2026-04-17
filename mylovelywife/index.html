@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>For Nidu 💖</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial;
+      background: pink;
+      text-align: center;
+    }
+
+    h1, p {
+      color: white;
+    }
+
+    .box {
+      margin-top: 100px;
+    }
+
+    input {
+      padding: 10px;
+      border-radius: 10px;
+      border: none;
+      text-align: center;
+      outline: none;
+    }
+
+    button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 10px;
+      background: white;
+      color: hotpink;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    #content {
+      display: none;
+    }
+
+    .gallery {
+      margin-top: 30px;
+      display: none;
+    }
+
+    img {
+      width: 200px;
+      border-radius: 15px;
+      margin: 10px;
+    }
+
+    .error {
+      color: red;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- LOGIN BOX -->
+  <div class="box" id="loginBox">
+    <h1>🔐 Enter Password</h1>
+    <input type="password" id="password" placeholder="Enter password">
+    <br>
+    <button onclick="checkPassword()">Enter</button>
+    <div class="error" id="error"></div>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div id="content">
+
+    <h1>Hey Nidu 💖</h1>
+    <p>I LOVE YOU 🫶</p>
+
+    <div class="gallery" id="gallery">
+      <h2 style="color:white;">YOUUU 💕</h2>
+
+      <img src="photo1.jpg">
+      <img src="photo2.jpg">
+      <img src="photo3.jpg">
+
+      <h3 style="color:white;">Always you ❤️</h3>
+    </div>
+
+  </div>
+
+  <script>
+    function checkPassword() {
+      let pass = document.getElementById("password").value;
+
+      if (pass === "23rdnovember") {
+        document.getElementById("loginBox").style.display = "none";
+        document.getElementById("content").style.display = "block";
+        document.getElementById("gallery").style.display = "block";
+      } else {
+        document.getElementById("error").innerText = "Wrong password ❌";
+      }
+    }
+  </script>
+
+</body>
+</html>
